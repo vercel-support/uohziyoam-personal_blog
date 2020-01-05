@@ -16,7 +16,7 @@ pygmentsCodefencesGuessSyntax = true
 
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 paginate = 10                                              # 首页每页显示的文章数
-disqusShortname = "yizhoumao"      # disqus_shortname
+disqusShortname = ""      # disqus_shortname yizhoumao
 googleAnalytics = "UA-136142783-1"      # UA-XXXXXXXX-X
 copyright = "Yizhou Mao"            # default: author.name ↓        # 默认为下面配置的author.name ↓
 

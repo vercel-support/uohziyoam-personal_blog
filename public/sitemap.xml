@@ -1,78 +1,78 @@
-<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://www.maoyizhou.com/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/tags/art/</loc>
+    <loc>https://www.maoyizhou.com/tags/art/</loc>
     <lastmod>2019-12-20T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://www.maoyizhou.com/</loc>
     <lastmod>2019-12-20T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://www.maoyizhou.com/categories/</loc>
     <lastmod>2019-12-20T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/english/</loc>
+    <loc>https://www.maoyizhou.com/tags/english/</loc>
     <lastmod>2019-12-20T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/franz-kline/</loc>
+    <loc>https://www.maoyizhou.com/tags/franz-kline/</loc>
     <lastmod>2019-12-20T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/knowledge/</loc>
+    <loc>https://www.maoyizhou.com/tags/knowledge/</loc>
     <lastmod>2019-12-20T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/knowledge-difficulty-value/</loc>
+    <loc>https://www.maoyizhou.com/post/knowledge-difficulty-value/</loc>
     <lastmod>2019-12-20T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/painting-number-2/</loc>
+    <loc>https://www.maoyizhou.com/tags/painting-number-2/</loc>
     <lastmod>2019-12-20T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/philosophy/</loc>
+    <loc>https://www.maoyizhou.com/categories/philosophy/</loc>
     <lastmod>2019-12-20T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://www.maoyizhou.com/post/</loc>
     <lastmod>2019-12-20T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://www.maoyizhou.com/tags/</loc>
     <lastmod>2019-12-20T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
