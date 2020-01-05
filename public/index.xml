@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Beck&#39;s Blog</title>
+    <title>BECKS BLOG</title>
     <link>https://www.maoyizhou.com/</link>
-    <description>Recent content on Beck&#39;s Blog</description>
+    <description>Recent content on BECKS BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Yizhou Mao</copyright>
-    <lastBuildDate>Tue, 20 Dec 2016 01:52:44 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jan 2020 01:52:44 -0500</lastBuildDate>
     
 	<atom:link href="https://www.maoyizhou.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Knowledge Difficulty Value</title>
+      <title>About Me</title>
+      <link>https://www.maoyizhou.com/post/about/</link>
+      <pubDate>Sun, 05 Jan 2020 01:52:44 -0500</pubDate>
+      
+      <guid>https://www.maoyizhou.com/post/about/</guid>
+      <description>About Me Currently studying Computer Science in Boston University.
+Contact Email: uohziyoam@hotmail.com</description>
+    </item>
+    
+    <item>
+      <title>Knowledge·Difficulty·Value</title>
       <link>https://www.maoyizhou.com/post/knowledge-difficulty-value/</link>
       <pubDate>Tue, 20 Dec 2016 01:52:44 -0500</pubDate>
       
