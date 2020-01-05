@@ -6,7 +6,7 @@ draft: false
 tags: ["Knowledge", "English", "Art", "Painting Number 2", "Franz Kline"]
 categories: ["Philosophy"]
 author: "Yizhou Mao"
-
+comment: true
 # autoCollapseToc: true
 contentCopyright: '<a href="https://maoyizhou.com" rel="noopener" target="_blank">See origin</a>'
 ---

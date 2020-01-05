@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://www.maoyizhou.com/"
 languageCode = "en"
 defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "Beck's Blog"
@@ -150,7 +150,7 @@ copyright = "Yizhou Mao"            # default: author.name ↓        # 默认�
   # You can get your appid and appkey from https://leancloud.cn
   # more info please open https://valine.js.org
   [params.valine]
-    enable = true
+    enable = false
     appId = 'hK0DKVWVgbtpig174as5AuEc-gzGzoHsz'
     appKey = 'EiYnu4refRWCMmcHchtbmsYX'
     notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
