@@ -150,14 +150,14 @@ copyright = "Yizhou Mao"            # default: author.name ↓        # 默认�
   # You can get your appid and appkey from https://leancloud.cn
   # more info please open https://valine.js.org
   [params.valine]
-    enable = false
+    enable = true
     appId = 'hK0DKVWVgbtpig174as5AuEc-gzGzoHsz'
     appKey = 'EiYnu4refRWCMmcHchtbmsYX'
     notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
     verify = false # Verification code
-    avatar = 'mm' 
+    avatar = 'retro' 
     placeholder = '说点什么吧...'
-    visitor = false
+    visitor = true
 
   [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
     enable = false
