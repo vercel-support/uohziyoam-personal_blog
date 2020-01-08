@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Non-linear Classification - BECKS BLOG</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Yizhou Mao" /><meta name="description" content="Source Code: https://github.com/uohziyoam/Intro-to-NN
+ Problem Definition In this context, it requires us to generate a non-linear classification by utilizing neural network to fit in our model.  Experiments In my experiments, I followed the instruction about data method by using 5-fold round robin cross-validation. The data were didvided into five sets, and choose four of them as training set and rest of them as testing set. The program repeatedtly train the model five times with randomly choosed set from original 2000 data points." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
+
+
+<link rel="canonical" href="https://www.maoyizhou.com/post/intro-to-nn/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Non-linear Classification" />
+<meta property="og:description" content="Source Code: https://github.com/uohziyoam/Intro-to-NN
+ Problem Definition In this context, it requires us to generate a non-linear classification by utilizing neural network to fit in our model.  Experiments In my experiments, I followed the instruction about data method by using 5-fold round robin cross-validation. The data were didvided into five sets, and choose four of them as training set and rest of them as testing set. The program repeatedtly train the model five times with randomly choosed set from original 2000 data points." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.maoyizhou.com/post/intro-to-nn/" />
+<meta property="article:published_time" content="2019-03-12T01:52:44-05:00" />
+<meta property="article:modified_time" content="2019-03-12T01:52:44-05:00" />
+<meta itemprop="name" content="Non-linear Classification">
+<meta itemprop="description" content="Source Code: https://github.com/uohziyoam/Intro-to-NN
+ Problem Definition In this context, it requires us to generate a non-linear classification by utilizing neural network to fit in our model.  Experiments In my experiments, I followed the instruction about data method by using 5-fold round robin cross-validation. The data were didvided into five sets, and choose four of them as training set and rest of them as testing set. The program repeatedtly train the model five times with randomly choosed set from original 2000 data points.">
+<meta itemprop="datePublished" content="2019-03-12T01:52:44-05:00" />
+<meta itemprop="dateModified" content="2019-03-12T01:52:44-05:00" />
+<meta itemprop="wordCount" content="655">
+
+
+
+<meta itemprop="keywords" content="Neural Network,Classification,AI," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Non-linear Classification"/>
+<meta name="twitter:description" content="Source Code: https://github.com/uohziyoam/Intro-to-NN
+ Problem Definition In this context, it requires us to generate a non-linear classification by utilizing neural network to fit in our model.  Experiments In my experiments, I followed the instruction about data method by using 5-fold round robin cross-validation. The data were didvided into five sets, and choose four of them as training set and rest of them as testing set. The program repeatedtly train the model five times with randomly choosed set from original 2000 data points."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">🚣🏾‍♂️</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu" 
+style="min-height: 100px;">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/post/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" >
+    <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">🚣🏾‍♂️</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Non-linear Classification</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019/03/12 </span>
+        <div class="post-category">
+            <a href="/categories/projects/"> Projects </a>
+            </div>
+          <span class="more-meta"> 655 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <hr>
+<blockquote>
+<p>Source Code: <a href="https://github.com/uohziyoam/Intro-to-NN">https://github.com/uohziyoam/Intro-to-NN</a></p>
+</blockquote>
+<h3 id="problem-definition">Problem Definition</h3>
+<h4 id="in-this-context-it-requires-us-to-generate-a-non-linear-classification-by-utilizing-neural-network-to-fit-in-our-model">In this context, it requires us to generate a non-linear classification by utilizing neural network to fit in our model.</h4>
+<hr>
+<h3 id="experiments">Experiments</h3>
+<h4 id="in-my-experiments-i-followed-the-instruction-about-data-method-by-using-5-fold-round-robin-cross-validation-the-data-were-didvided-into-five-sets-and-choose-four-of-them-as-training-set-and-rest-of-them-as-testing-set-the-program-repeatedtly-train-the-model-five-times-with-randomly-choosed-set-from-original-2000-data-points">In my experiments, I followed the instruction about data method by using 5-fold round robin cross-validation. The data were didvided into five sets, and choose four of them as training set and rest of them as testing set. The program repeatedtly train the model five times with randomly choosed set from original 2000 data points.</h4>
+<h4 id="the-trainning-model-can-successfully-predict-result-with-992-accuracy-to-evaluate-the-performance-of-the-model-the-program-generate-a-confusion-matrix-to-show-how-well-the-model-predict-positive-while-the-ground-truth-is-true-and-conversly-predict-negative-as-the-ground-truth-is-false">The trainning model can successfully predict result with 99.2% accuracy. To evaluate the performance of the model, the program generate a confusion matrix to show how well the model predict positive while the ground truth is true, and conversly predict negative as the ground truth is false.</h4>
+<hr>
+<h3 id="results">Results</h3>
+<h4 id="in-this-context-it-requires-us-to-generate-a-non-linear-classification-by-utilizing-neural-network-to-fit-in-our-model-1">In this context, it requires us to generate a non-linear classification by utilizing neural network to fit in our model.</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Before</th>
+<th align="center">After</th>
+<th align="right">Before</th>
+<th align="left">After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img src="/img/intro-to-nn/NonLinearResult/b1.png" alt="Local Picture"></td>
+<td align="center"><img src="/img/intro-to-nn/NonLinearResult/a1.png" alt="Local Picture"></td>
+<td align="right"><img src="/img/intro-to-nn/LinearResult/b1.png" alt="Local Picture"></td>
+<td align="left"><img src="/img/intro-to-nn/LinearResult/a1.png" alt="Local Picture"></td>
+</tr>
+<tr>
+<td align="left"><img src="/img/intro-to-nn/NonLinearResult/b2.png" alt="Local Picture"></td>
+<td align="center"><img src="/img/intro-to-nn/NonLinearResult/a2.png" alt="Local Picture"></td>
+<td align="right"><img src="/img/intro-to-nn/LinearResult/b2.png" alt="Local Picture"></td>
+<td align="left"><img src="/img/intro-to-nn/LinearResult/a2.png" alt="Local Picture"></td>
+</tr>
+<tr>
+<td align="left"><img src="/img/intro-to-nn/NonLinearResult/b3.png" alt="Local Picture"></td>
+<td align="center"><img src="/img/intro-to-nn/NonLinearResult/a3.png" alt="Local Picture"></td>
+<td align="right"><img src="/img/intro-to-nn/LinearResult/b3.png" alt="Local Picture"></td>
+<td align="left"><img src="/img/intro-to-nn/LinearResult/a3.png" alt="Local Picture"></td>
+</tr>
+<tr>
+<td align="left"><img src="/img/intro-to-nn/NonLinearResult/b4.png" alt="Local Picture"></td>
+<td align="center"><img src="/img/intro-to-nn/NonLinearResult/a4.png" alt="Local Picture"></td>
+<td align="right"><img src="/img/intro-to-nn/LinearResult/b4.png" alt="Local Picture"></td>
+<td align="left"><img src="/img/intro-to-nn/LinearResult/a4.png" alt="Local Picture"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="discussion">Discussion</h3>
+<p><em><strong>1. Why is 5-fold round robin cross-validation useful in machine learning?</strong></em></p>
+<h4 id="cross-validation-is-primarily-used-in-applied-machine-learning-to-estimate-the-skill-of-a-machine-learning-model-on-unseen-data-that-is-to-use-a-limited-sample-in-order-to-estimate-how-the-model-is-expected-to-perform-in-general-when-used-to-make-predictions-on-data-not-used-during-the-training-of-the-model">Cross-validation is primarily used in applied machine learning to estimate the skill of a machine learning model on unseen data. That is, to use a limited sample in order to estimate how the model is expected to perform in general when used to make predictions on data not used during the training of the model.</h4>
+<p><em><strong>2. What effect does the learning rate have on how your neural network is trained?</strong></em></p>
+<h4 id="from-the-comparison-among-three-choices-of-learning-rates-the-figures-below-clearly-describe-what-happened-to-the-predictions-while-training-the-model-the-appropriate-learning-rate-is-essential-to-the-training-of-model-a-small-leanring-rate-is-very-accurate-because-it-slowly-approaches-the-minimum-of-the-derivative-of-loss-to-weight-however-it-is-not-so-efficient-while-choosing-such-small-learning-rate-on-the-other-hand-a-larger-learning-rate-is-more-sufficient-but-it-may-always-miss-the-minimum-of-the-derivative-of-loss-forever-eg-the-third-figure-below">From the comparison among three choices of learning rates, the figures below clearly describe what happened to the predictions while training the model. The appropriate learning rate is essential to the training of model. A small leanring rate is very accurate because it slowly approaches the minimum of the derivative of loss to weight; however, it is not so efficient while choosing such small learning rate. On the other hand, a larger learning rate is more sufficient but it may always miss the minimum of the derivative of loss forever (e.g. the third figure below).</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Learning Rate: 0.001</th>
+<th align="center">Learning Rate: 0.005</th>
+<th align="right">Learning Rate: 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img src="/img/intro-to-nn/LearningRate001.png" alt="Local Picture"></td>
+<td align="center"><img src="/img/intro-to-nn/LearningRate005.png" alt="Local Picture"></td>
+<td align="right"><img src="/img/intro-to-nn/LearningRate1.png" alt="Local Picture"></td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><em><strong>3. What is overfitting and why does it occur in practice? Name and briefly explain 3 ways to reduce overfitting.</strong></em></p>
+<h4 id="overfitting-is-the-situation-that-a-model-seemly-fit-every-data-points-but-it-actually-misses-the-most-important-information-----pattern-in-the-reality-three-ways-to-reduce-overfitting-1-regularization-2-remove-additional-features-3-stop-training-process-earlier">Overfitting is the situation that a model seemly fit every data points, but it actually misses the most important information &mdash; pattern in the reality. Three ways to reduce overfitting: 1. Regularization 2. Remove additional features 3. Stop training process earlier.</h4>
+<p><em><strong>4. How does L2 regularization prevent overfitting? How differently does your model perform before and after implementing L2 regularization?</strong></em></p>
+<h4 id="in-the-machine-learning-practice-we-usually-want-to-fit-our-model-as-accurately-as-possible-however-sometimes-the-model-did-fit-all-the-data-points-but-also-the-noise-points-in-the-dataset-l2-regularization-can-prevent-overfitting-by-adding-a-penalty-for-an-extreme-parameter-values-in-the-system-l2-regularization-reduces-the-magnitude-of-coefficients-evenly">In the machine learning practice, we usually want to fit our model as accurately as possible. However, sometimes the model did fit all the data points but also the noise points in the dataset. L2 regularization can prevent overfitting by adding a penalty for an extreme parameter values in the system. L2 regularization reduces the magnitude of coefficients evenly.</h4>
+<h4 id="from-the-figures-show-below-the-slightly-difference-between-them-is-the-fit-of-the-model-after-l2-regularization-the-model-looks-more-smoothly-which-means-it-avoid-overfitting-to-certain-extent-however-the-figure-of-training-without-l2-regularization-looks-more-complex-which-fit-every-data-points-it-is-very-accurate-for-the-datasets-we-have-but-it-is-not-optimal-for-our-prediction-in-real-world">From the figures show below, the slightly difference between them is the fit of the model. After L2 Regularization, the model looks more smoothly which means it avoid overfitting to certain extent. However, the figure of training without L2 Regularization looks more complex which fit every data points; It is very accurate for the datasets we have, but it is not optimal for our prediction in real world.</h4>
+<hr>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="p">:</span>
+    <span class="c1">### sigmoid</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">z</span><span class="p">)</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">sigmoidDerivative</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="p">:</span>
+    <span class="c1">### sigmoid derivative</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">hypertan</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="p">:</span>
+    <span class="c1">### hypertan</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">hypertanDerivative</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="p">:</span>
+    <span class="c1">### hypertan derivative</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="p">)</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="o">*</span><span class="mi">2</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="bibliography">Bibliography</h3>
+<h4 id="1-xiaojun-wu-pcastandford-machine-learning-13-jan2019-httpsyoyoyohamapigitbooksio-accessed-03-mar2019">1. &ldquo;Xiaojun Wu.&rdquo; PCA·Standford Machine Learning, 13 Jan.2019, <a href="https://yoyoyohamapi.gitbooks.io/,">https://yoyoyohamapi.gitbooks.io/,</a> (accessed 03 Mar.2019).</h4>
+<h4 id="2-overfitting-in-machine-learning-what-it-is-and-how-to-prevent-it-elitedatascience-25-jan-2019-httpselitedatasciencecomoverfitting-in-machine-learninghow-to-prevent-accessed-02-mar2019">2. “Overfitting in Machine Learning: What It Is and How to Prevent It.” EliteDataScience, 25 Jan. 2019, <a href="https://elitedatascience.com/overfitting-in-machine-learning#how-to-prevent,">https://elitedatascience.com/overfitting-in-machine-learning#how-to-prevent,</a> (accessed 02 Mar.2019).</h4>
+<h4 id="3-bronshtein-adi-traintest-split-and-cross-validation-in-python--towards-data-science-towards-data-science-towards-data-science-17-may-2017-httpstowardsdatasciencecomtrain-test-split-and-cross-validation-in-python-80b61beca4b6-accessed-02-mar2019">3. Bronshtein, Adi. “Train/Test Split and Cross Validation in Python – Towards Data Science.” Towards Data Science, Towards Data Science, 17 May 2017, <a href="https://towardsdatascience.com/train-test-split-and-cross-validation-in-python-80b61beca4b6,">https://towardsdatascience.com/train-test-split-and-cross-validation-in-python-80b61beca4b6,</a> (accessed 02 Mar.2019).</h4>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Yizhou Mao</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-03-12
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/neural-network/">Neural Network</a>
+          <a href="/tags/classification/">Classification</a>
+          <a href="/tags/ai/">AI</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/about/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">About</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/word-puzzlie/">
+            <span class="next-text nav-default">Word Puzzle - 连词达人</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+          
+
+  <span id="/post/intro-to-nn/" class="leancloud_visitors" data-flag-title="Non-linear Classification">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hK0DKVWVgbtpig174as5AuEc-gzGzoHsz',
+        appKey: 'EiYnu4refRWCMmcHchtbmsYX',
+        notify:  false ,
+        verify:  false ,
+        avatar:'retro',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:uohziyoam@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/uohziyoam" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.instagram.com/uohziyoam/" class="iconfont icon-instagram" title="instagram"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="theme-info">
+    Hosted by
+    <a class="theme-link" style="text-decoration: underline; font-weight: bold;" href="https://zeit.co/">Zeit</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Yizhou Mao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-136142783-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

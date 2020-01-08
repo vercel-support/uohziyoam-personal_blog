@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Word Puzzle - 连词达人 - BECKS BLOG</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Yizhou Mao" /><meta name="description" content="Source Code: https://github.com/uohziyoam/WordConnectingGame Q: Briefly talk about the game Word Puzzle. A: Randomly generate certain numbers of white squares based on three or four different words. Each word has a common letter shared with other words. The game itself requires the users to fill out the blank areas with the corresponding words. Q: What is the gameplay of Word Puzzle? A: Q: How to set difficulties for each level? A:" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
+
+
+<link rel="canonical" href="https://www.maoyizhou.com/post/word-puzzlie/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Word Puzzle - 连词达人" />
+<meta property="og:description" content="Source Code: https://github.com/uohziyoam/WordConnectingGame Q: Briefly talk about the game Word Puzzle. A: Randomly generate certain numbers of white squares based on three or four different words. Each word has a common letter shared with other words. The game itself requires the users to fill out the blank areas with the corresponding words. Q: What is the gameplay of Word Puzzle? A: Q: How to set difficulties for each level? A:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.maoyizhou.com/post/word-puzzlie/" />
+<meta property="article:published_time" content="2019-02-05T01:52:44-05:00" />
+<meta property="article:modified_time" content="2019-02-05T01:52:44-05:00" />
+<meta itemprop="name" content="Word Puzzle - 连词达人">
+<meta itemprop="description" content="Source Code: https://github.com/uohziyoam/WordConnectingGame Q: Briefly talk about the game Word Puzzle. A: Randomly generate certain numbers of white squares based on three or four different words. Each word has a common letter shared with other words. The game itself requires the users to fill out the blank areas with the corresponding words. Q: What is the gameplay of Word Puzzle? A: Q: How to set difficulties for each level? A:">
+<meta itemprop="datePublished" content="2019-02-05T01:52:44-05:00" />
+<meta itemprop="dateModified" content="2019-02-05T01:52:44-05:00" />
+<meta itemprop="wordCount" content="474">
+
+
+
+<meta itemprop="keywords" content="连词达人,Word Puzzle,Cocos Creator,Javascript,微信小程序," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Word Puzzle - 连词达人"/>
+<meta name="twitter:description" content="Source Code: https://github.com/uohziyoam/WordConnectingGame Q: Briefly talk about the game Word Puzzle. A: Randomly generate certain numbers of white squares based on three or four different words. Each word has a common letter shared with other words. The game itself requires the users to fill out the blank areas with the corresponding words. Q: What is the gameplay of Word Puzzle? A: Q: How to set difficulties for each level? A:"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">🚣🏾‍♂️</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu" 
+style="min-height: 100px;">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/post/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" >
+    <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">🚣🏾‍♂️</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Word Puzzle - 连词达人</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019/02/05 </span>
+        <div class="post-category">
+            <a href="/categories/projects/"> Projects </a>
+            </div>
+          <span class="more-meta"> 474 words </span>
+          <span class="more-meta"> 1 min read </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <hr>
+<blockquote>
+<p>Source Code: <a href="https://github.com/uohziyoam/WordConnectingGame">https://github.com/uohziyoam/WordConnectingGame</a></p>
+</blockquote>
+<h3 id="q-briefly-talk-about-the-game-word-puzzle">Q: Briefly talk about the game Word Puzzle.</h3>
+<h4 id="a-randomly-generate-certain-numbers-of-white-squares-based-on-three-or-four-different-words-each-word-has-a-common-letter-shared-with-other-words-the-game-itself-requires-the-users-to-fill-out-the-blank-areas-with-the-corresponding-words">A: Randomly generate certain numbers of white squares based on three or four different words. Each word has a common letter shared with other words. The game itself requires the users to fill out the blank areas with the corresponding words.</h4>
+<h3 id="q-what-is-the-gameplay-of-word-puzzle">Q: What is the gameplay of Word Puzzle?</h3>
+<h4 id="a-local-pictureimgword-puzzlejpg-">A: <img src="/img/word_puzzle.jpg" alt="Local Picture" title="连词达人"></h4>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="q-how-to-set-difficulties-for-each-level">Q: How to set difficulties for each level?</h3>
+<h4 id="a-this-game-includes-different-levels-as-the-higher-level-the-user-approached-the-puzzle-requires-users-to-fill-out-the-longer-blank-areas-and-also-the-users-may-need-to-come-up-with-more-and-more-unfamiliar-words">A: This game includes different levels. As the higher level the user approached, the puzzle requires users to fill out the longer blank areas; and also, the users may need to come up with more and more unfamiliar words.</h4>
+<h3 id="q-the-number-of-words-is-limited-to-three-to-four-for-each-level">Q: The number of words is limited to three to four for each level?</h3>
+<h4 id="a-true">A: True.</h4>
+<h3 id="q-does-the-game-offer-additional-features">Q: Does the game offer additional features?</h3>
+<h4 id="a-the-social-property-of-this-game-is-based-on-the-wechat-a-chinese-social-media-in-the-game-every-user-has-the-chance-to-see-the-ranks-for-themselves-and-their-friends-it-also-records-the-number-of-coins-they-have-won-every-time-the-user-finds-a-word-they-are-rewarded-five-coins-five-coins-can-exchange-for-a-hint-for-one-word-in-the-game">A: The social property of this game is based on the WeChat (a Chinese social media). In the game, every user has the chance to see the ranks for themselves and their friends. It also records the number of coins they have won. Every time the user finds a word, they are rewarded five coins. Five coins can exchange for a hint for one word in the game.</h4>
+<h3 id="q-does-the-game-store-any-data">Q: Does the game store any data?</h3>
+<h4 id="a-yes-it-does-the-game-records-information-for-each-user-including-their-avatar-nicknames-gender-and-also-what-ranks-they-have-reached-so-far-these-data-are-used-to-give-users-a-chance-to-compete-with-each-other">A: Yes, it does. The game records information for each user, including their avatar, nicknames, gender, and also what ranks they have reached so far. These data are used to give users a chance to compete with each other.</h4>
+<h3 id="q-how-to-achieve-the-view-of-the-front-end">Q: How to achieve the view of the front end?</h3>
+<h4 id="a-we-used-an-engine-called-cocos-creator-it-allows-us-to-render-the-views-we-need-for-the-game">A: We used an engine called cocos creator. It allows us to render the views we need for the game.</h4>
+<h3 id="q-what-is-the-logic-behind-the-game">Q: What is the logic behind the game?</h3>
+<h4 id="a-two-dictionaries-are-used-to-store-all-vocabularies-for-easy-mode-and-hard-mode-we-choose-3000-different-words-in-total">A: Two dictionaries are used to store all vocabularies for easy mode and hard mode. We choose 3,000 different words in total.</h4>
+<h3 id="q-how-to-generate-those-words">Q: How to generate those words?</h3>
+<h4 id="a-randomly-pick-one-word-as-the-seed-generate-all-possible-permutations-based-on-the-letter-this-word-contains-store-the-permutations-in-an-array-go-through-every-permutation-in-the-array-and-check-if-it-exists-in-our-dictionary-if-it-exists-then-we-push-this-word-into-a-new-array-repeat-this-process-until-we-find-three-to-four-words-so-that-there-are-enough-words-for-the-level">A: Randomly pick one word as the seed. Generate all possible permutations based on the letter this word contains. Store the permutations in an array. Go through every permutation in the array and check if it exists in our dictionary. If it exists, then we push this word into a new array. Repeat this process until we find three to four words so that there are enough words for the level.</h4>
+<h3 id="q-if-the-words-can-not-be-found-how-to-handle-the-corner-case">Q: If the words can not be found, how to handle the corner case?</h3>
+<h4 id="a-the-number-of-words-needed-for-each-level-is-limited-to-4-thus-it-is-very-unlikely-that-there-are-not-enough-words-to-share-the-same-character">A: The number of words needed for each level is limited to 4; thus, it is very unlikely that there are not enough words to share the same character.</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// smaple code
+</span><span class="c1"></span><span class="nx">drawLine</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">startPosition</span><span class="p">,</span> <span class="nx">endPosition</span><span class="p">,</span> <span class="nx">lineArr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">lineArr</span><span class="p">.</span><span class="nx">position</span> <span class="o">=</span> <span class="nx">startPosition</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">dt</span> <span class="o">=</span> <span class="nx">startPosition</span><span class="p">.</span><span class="nx">sub</span><span class="p">(</span><span class="nx">endPosition</span><span class="p">)</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">radian</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">atan2</span><span class="p">(</span><span class="nx">dt</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">dt</span><span class="p">.</span><span class="nx">y</span><span class="p">)</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">180</span> <span class="o">*</span> <span class="nx">radian</span> <span class="o">/</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">+</span> <span class="mi">90</span><span class="p">)</span> <span class="o">%</span> <span class="mi">360</span><span class="p">;</span>
+    <span class="nx">lineArr</span><span class="p">.</span><span class="nx">rotation</span> <span class="o">=</span> <span class="nx">rotation</span><span class="p">;</span>
+    <span class="nx">lineArr</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">startPosition</span><span class="p">.</span><span class="nx">sub</span><span class="p">(</span><span class="nx">endPosition</span><span class="p">)</span><span class="p">.</span><span class="nx">mag</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Yizhou Mao</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-02-05
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E8%BF%9E%E8%AF%8D%E8%BE%BE%E4%BA%BA/">连词达人</a>
+          <a href="/tags/word-puzzle/">Word Puzzle</a>
+          <a href="/tags/cocos-creator/">Cocos Creator</a>
+          <a href="/tags/javascript/">Javascript</a>
+          <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/intro-to-nn/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Non-linear Classification</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/knowledge-difficulty-value/">
+            <span class="next-text nav-default">Knowledge·Difficulty·Value</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+          
+
+  <span id="/post/word-puzzlie/" class="leancloud_visitors" data-flag-title="Word Puzzle - 连词达人">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'hK0DKVWVgbtpig174as5AuEc-gzGzoHsz',
+        appKey: 'EiYnu4refRWCMmcHchtbmsYX',
+        notify:  false ,
+        verify:  false ,
+        avatar:'retro',
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:uohziyoam@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/uohziyoam" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.instagram.com/uohziyoam/" class="iconfont icon-instagram" title="instagram"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="theme-info">
+    Hosted by
+    <a class="theme-link" style="text-decoration: underline; font-weight: bold;" href="https://zeit.co/">Zeit</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Yizhou Mao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-136142783-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

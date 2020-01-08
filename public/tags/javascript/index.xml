@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on BECKS BLOG</title>
+    <link>https://www.maoyizhou.com/tags/javascript/</link>
+    <description>Recent content in Javascript on BECKS BLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Yizhou Mao</copyright>
+    <lastBuildDate>Tue, 05 Feb 2019 01:52:44 -0500</lastBuildDate>
+    
+	<atom:link href="https://www.maoyizhou.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Word Puzzle - 连词达人</title>
+      <link>https://www.maoyizhou.com/post/word-puzzlie/</link>
+      <pubDate>Tue, 05 Feb 2019 01:52:44 -0500</pubDate>
+      
+      <guid>https://www.maoyizhou.com/post/word-puzzlie/</guid>
+      <description>Source Code: https://github.com/uohziyoam/WordConnectingGame Q: Briefly talk about the game Word Puzzle. A: Randomly generate certain numbers of white squares based on three or four different words. Each word has a common letter shared with other words. The game itself requires the users to fill out the blank areas with the corresponding words. Q: What is the gameplay of Word Puzzle? A: Q: How to set difficulties for each level? A:</description>
+    </item>
+    
+  </channel>
+</rss>

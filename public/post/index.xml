@@ -13,13 +13,32 @@
     
     
     <item>
-      <title>About Me</title>
+      <title>About</title>
       <link>https://www.maoyizhou.com/post/about/</link>
       <pubDate>Sun, 05 Jan 2020 01:52:44 -0500</pubDate>
       
       <guid>https://www.maoyizhou.com/post/about/</guid>
       <description>About Me Currently studying Computer Science in Boston University.
 Contact Email: uohziyoam@hotmail.com</description>
+    </item>
+    
+    <item>
+      <title>Non-linear Classification</title>
+      <link>https://www.maoyizhou.com/post/intro-to-nn/</link>
+      <pubDate>Tue, 12 Mar 2019 01:52:44 -0500</pubDate>
+      
+      <guid>https://www.maoyizhou.com/post/intro-to-nn/</guid>
+      <description>Source Code: https://github.com/uohziyoam/Intro-to-NN
+ Problem Definition In this context, it requires us to generate a non-linear classification by utilizing neural network to fit in our model.  Experiments In my experiments, I followed the instruction about data method by using 5-fold round robin cross-validation. The data were didvided into five sets, and choose four of them as training set and rest of them as testing set. The program repeatedtly train the model five times with randomly choosed set from original 2000 data points.</description>
+    </item>
+    
+    <item>
+      <title>Word Puzzle - 连词达人</title>
+      <link>https://www.maoyizhou.com/post/word-puzzlie/</link>
+      <pubDate>Tue, 05 Feb 2019 01:52:44 -0500</pubDate>
+      
+      <guid>https://www.maoyizhou.com/post/word-puzzlie/</guid>
+      <description>Source Code: https://github.com/uohziyoam/WordConnectingGame Q: Briefly talk about the game Word Puzzle. A: Randomly generate certain numbers of white squares based on three or four different words. Each word has a common letter shared with other words. The game itself requires the users to fill out the blank areas with the corresponding words. Q: What is the gameplay of Word Puzzle? A: Q: How to set difficulties for each level? A:</description>
     </item>
     
     <item>
