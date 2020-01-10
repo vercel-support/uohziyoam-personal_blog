@@ -14,10 +14,10 @@
     
     <item>
       <title>Quick Sort</title>
-      <link>https://www.maoyizhou.com/post/sort/</link>
+      <link>https://www.maoyizhou.com/post/quick-sort/</link>
       <pubDate>Fri, 10 Jan 2020 01:52:44 -0500</pubDate>
       
-      <guid>https://www.maoyizhou.com/post/sort/</guid>
+      <guid>https://www.maoyizhou.com/post/quick-sort/</guid>
       <description>Quick Sort Algorithm utilizes the idea of Divide-and-Conquer. It picks a pivot from the array and then partition items around the pivot in the array. Recursively repeat this process until all subarrays have been partitioned. $ _{[1]} $
 What is Quick Sort? Quick Sort is commonly used in Computer Science when required to deal with in-memory sorting problems. Two main actions taken in quick sort are swap() and partition(). The main idea of quick sort is Divide-and-Conquer.</description>
     </item>
