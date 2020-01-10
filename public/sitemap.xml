@@ -2,14 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.maoyizhou.com/post/about/</loc>
-    <lastmod>2020-01-05T01:52:44-05:00</lastmod>
+    <loc>https://www.maoyizhou.com/categories/algorithms/</loc>
+    <lastmod>2020-01-10T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.maoyizhou.com/tags/about-me/</loc>
+    <loc>https://www.maoyizhou.com/</loc>
+    <lastmod>2020-01-10T01:52:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maoyizhou.com/categories/</loc>
+    <lastmod>2020-01-10T01:52:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maoyizhou.com/post/</loc>
+    <lastmod>2020-01-10T01:52:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maoyizhou.com/tags/quick-sort/</loc>
+    <lastmod>2020-01-10T01:52:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maoyizhou.com/post/sort/</loc>
+    <lastmod>2020-01-10T01:52:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maoyizhou.com/tags/sorting-techniques/</loc>
+    <lastmod>2020-01-10T01:52:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maoyizhou.com/tags/</loc>
+    <lastmod>2020-01-10T01:52:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maoyizhou.com/post/about/</loc>
     <lastmod>2020-01-05T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -23,28 +72,7 @@
   </url>
   
   <url>
-    <loc>https://www.maoyizhou.com/</loc>
-    <lastmod>2020-01-05T01:52:44-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.maoyizhou.com/categories/</loc>
-    <lastmod>2020-01-05T01:52:44-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.maoyizhou.com/post/</loc>
-    <lastmod>2020-01-05T01:52:44-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.maoyizhou.com/tags/</loc>
+    <loc>https://www.maoyizhou.com/tags/about-me/</loc>
     <lastmod>2020-01-05T01:52:44-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

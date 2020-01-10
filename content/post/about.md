@@ -9,10 +9,8 @@ comment: false
 toc: false
 ---
 
-## About Me
+# About Me
 
 Currently studying Computer Science in Boston University.
-
-## Contact
 
 Email: uohziyoam@hotmail.com

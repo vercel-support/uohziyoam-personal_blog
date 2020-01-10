@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Yizhou Mao</copyright>
-    <lastBuildDate>Sun, 05 Jan 2020 01:52:44 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 01:52:44 -0500</lastBuildDate>
     
 	<atom:link href="https://www.maoyizhou.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quick Sort</title>
+      <link>https://www.maoyizhou.com/post/sort/</link>
+      <pubDate>Fri, 10 Jan 2020 01:52:44 -0500</pubDate>
+      
+      <guid>https://www.maoyizhou.com/post/sort/</guid>
+      <description>Quick Sort Algorithm utilizes the idea of Divide-and-Conquer. It picks a pivot from the array and then partition items around the pivot in the array. Recursively repeat this process until all subarrays have been partitioned. $ _{[1]} $
+What is Quick Sort? Quick Sort is commonly used in Computer Science when required to deal with in-memory sorting problems. Two main actions taken in quick sort are swap() and partition(). The main idea of quick sort is Divide-and-Conquer.</description>
+    </item>
     
     <item>
       <title>About</title>
@@ -19,7 +29,7 @@
       
       <guid>https://www.maoyizhou.com/post/about/</guid>
       <description>About Me Currently studying Computer Science in Boston University.
-Contact Email: uohziyoam@hotmail.com</description>
+Email: uohziyoam@hotmail.com</description>
     </item>
     
     <item>
