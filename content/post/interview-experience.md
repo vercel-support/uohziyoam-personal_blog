@@ -100,11 +100,11 @@ autoCollapseToc: true
 
 ### (1) Status
 
-#### Application submitted (2020.01.12)
+#### Application submitted (2020.01.13)
 
 ### (2) Position
 
-#### Software Engineering Internship
+#### Site Reliability Engineering Internship
 
 ## **ebay**
 
@@ -322,6 +322,8 @@ autoCollapseToc: true
 
 #### Application submitted (2020.01.12)
 
+#### Online Assesment (2020.01.13)
+
 ### (2) Position
 
 #### Summer Software Engineering Intern
@@ -345,3 +347,13 @@ autoCollapseToc: true
 ### (2) Position
 
 #### Full-Stack Web Development Intern
+
+## **Disney**
+
+### (1) Status
+
+#### Application submitted (2020.01.12)
+
+### (2) Position
+
+#### Software Engineering Intern (Travel Ops Integration)- Fall 2020
