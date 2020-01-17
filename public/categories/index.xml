@@ -7,19 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Yizhou Mao</copyright>
-    <lastBuildDate>Sun, 12 Jan 2020 01:52:44 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 01:52:44 -0500</lastBuildDate>
     
 	<atom:link href="https://www.maoyizhou.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Internship</title>
-      <link>https://www.maoyizhou.com/categories/internship/</link>
-      <pubDate>Sun, 12 Jan 2020 01:52:44 -0500</pubDate>
-      
-      <guid>https://www.maoyizhou.com/categories/internship/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Algorithms</title>

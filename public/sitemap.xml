@@ -2,63 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.maoyizhou.com/tags/applications/</loc>
-    <lastmod>2020-01-12T16:14:59-05:00</lastmod>
+    <loc>https://www.maoyizhou.com/categories/algorithms/</loc>
+    <lastmod>2020-01-10T16:14:39-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.maoyizhou.com/</loc>
-    <lastmod>2020-01-12T16:14:59-05:00</lastmod>
+    <lastmod>2020-01-10T16:14:39-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.maoyizhou.com/categories/</loc>
-    <lastmod>2020-01-12T16:14:59-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.maoyizhou.com/categories/internship/</loc>
-    <lastmod>2020-01-12T16:14:59-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.maoyizhou.com/post/interview-experience/</loc>
-    <lastmod>2020-01-12T16:14:59-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.maoyizhou.com/tags/internships/</loc>
-    <lastmod>2020-01-12T16:14:59-05:00</lastmod>
+    <lastmod>2020-01-10T16:14:39-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.maoyizhou.com/post/</loc>
-    <lastmod>2020-01-12T16:14:59-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.maoyizhou.com/tags/</loc>
-    <lastmod>2020-01-12T16:14:59-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.maoyizhou.com/categories/algorithms/</loc>
     <lastmod>2020-01-10T16:14:39-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -80,6 +45,13 @@
   
   <url>
     <loc>https://www.maoyizhou.com/tags/sorting-techniques/</loc>
+    <lastmod>2020-01-10T16:14:39-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maoyizhou.com/tags/</loc>
     <lastmod>2020-01-10T16:14:39-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

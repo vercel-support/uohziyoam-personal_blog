@@ -1,7 +1,7 @@
 ---
 title: "Internship Applications"
 date: 2020-01-12T01:52:44-05:00
-draft: false
+draft: true
 tags: ["Internships", "Applications"]
 categories: ["Internship"]
 author: "Yizhou Mao"
@@ -53,6 +53,18 @@ autoCollapseToc: true
 ### (2) Position
 
 #### 2021 Graduates- Software Engineer Internship Opportunity
+
+## **经纬恒润**
+
+### (1) Status
+
+#### Application submitted (2020.01.12)
+
+#### First Round Interview (2020.01.16)
+
+### (2) Position
+
+#### 前端工程师实习生
 
 ---
 
@@ -266,11 +278,13 @@ autoCollapseToc: true
 
 #### Software Development Engineer - Internship (Job ID: 941377)
 
-## **Handshake**
+## **~~Handshake~~**
 
 ### (1) Status
 
 #### Application submitted (2020.01.12)
+
+#### Rejection (2020.01.16)
 
 ### (2) Position
 
@@ -316,13 +330,15 @@ autoCollapseToc: true
 
 #### Onshape Software Development Intern
 
-## **Genospace**
+## **~~Genospace~~**
 
 ### (1) Status
 
 #### Application submitted (2020.01.12)
 
 #### Online Assesment (2020.01.13)
+
+#### Rejection (2020.01.15)
 
 ### (2) Position
 
@@ -357,3 +373,93 @@ autoCollapseToc: true
 ### (2) Position
 
 #### Software Engineering Intern (Travel Ops Integration)- Fall 2020
+
+## **Facebook**
+
+### (1) Status
+
+#### Application submitted (2020.01.16)
+
+### (2) Position
+
+#### Software Engineering Internship
+
+## **Oracle**
+
+### (1) Status
+
+#### Application submitted (2020.01.16)
+
+### (2) Position
+
+#### Software Developer Summer Intern (OCI)
+
+## **Quizlet**
+
+### (1) Status
+
+#### Application submitted (2020.01.16)
+
+### (2) Position
+
+#### Software Engineer Intern- Marketplace
+
+## **Nike**
+
+### (1) Status
+
+#### Application submitted (2020.01.16)
+
+### (2) Position
+
+#### Global Technology Internship
+
+## **Mercari**
+
+### (1) Status
+
+#### Application submitted (2020.01.16)
+
+### (2) Position
+
+#### Software Engineer, Frontend [Internship]
+
+## **Twitch**
+
+### (1) Status
+
+#### Application submitted (2020.01.16)
+
+### (2) Position
+
+#### Software Engineer Internship
+
+## **TicketMaster**
+
+### (1) Status
+
+#### Application submitted (2020.01.16)
+
+### (2) Position
+
+#### Software Engineer Internship
+
+## **Slack**
+
+### (1) Status
+
+#### Application submitted (2020.01.16)
+
+### (2) Position
+
+#### Technical Program Manager Intern
+
+## **MathWorks**
+
+### (1) Status
+
+#### Application submitted (2020.01.16)
+
+### (2) Position
+
+#### EDG Intern - Bachelor Engineering Majors
