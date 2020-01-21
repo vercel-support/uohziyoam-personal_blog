@@ -460,6 +460,18 @@ autoCollapseToc: true
 
 #### Application submitted (2020.01.16)
 
+#### Rejection (2020.01.20)
+
 ### (2) Position
 
 #### EDG Intern - Bachelor Engineering Majors
+
+## **CITADEL**
+
+### (1) Status
+
+#### Application submitted (2020.01.17)
+
+### (2) Position
+
+#### Software Engineer – Intern (US)
